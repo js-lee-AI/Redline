@@ -341,4 +341,4 @@ Code is MIT, see [LICENSE](LICENSE). The paper is CC BY 4.0.
 
 ## Acknowledgments
 
-Redline builds on [Learn-Then-Test](https://doi.org/10.1214/24-AOAS1998) and on the step-down procedure of Holm (1979), which are cited rather than re-claimed. The block-diffusion grids were served with the [Diffulex](https://github.com/SJTU-DENG-Lab/Diffulex) engine and the public MBD-LM checkpoints of [Jin et al. (2026)](https://arxiv.org/abs/2606.29215).
+Redline builds on [Learn-Then-Test](https://doi.org/10.1214/24-AOAS1998) and on the step-down procedure of Holm (1979). The block-diffusion grids were served with the [Diffulex](https://github.com/SJTU-DENG-Lab/Diffulex) engine and the public MBD-LM checkpoints of [Jin et al. (2026)](https://arxiv.org/abs/2606.29215).
