@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "Redline: code for Faster Block-Diffusion Serving with Distribution-Free Risk Guarantees"
+type: software
+authors:
+  - family-names: Lee
+    given-names: Jungseob
+  - family-names: Lee
+    given-names: "Dongyub Jude"
+  - family-names: Park
+    given-names: Chanjun
+  - family-names: Eo
+    given-names: Sugyeong
+  - family-names: Lim
+    given-names: Heuiseok
+repository-code: "https://github.com/js-lee-AI/Redline"
+license: MIT
+version: "0.1.0"
+date-released: "2026-09-28"
+keywords:
+  - "block-diffusion"
+  - "risk control"
+  - "LLM serving"
+  - "multiple testing"
+  - "speculative decoding"
+preferred-citation:
+  type: article
+  title: "Faster Block-Diffusion Serving with Distribution-Free Risk Guarantees"
+  authors:
+    - family-names: Lee
+      given-names: Jungseob
+    - family-names: Lee
+      given-names: "Dongyub Jude"
+    - family-names: Park
+      given-names: Chanjun
+    - family-names: Eo
+      given-names: Sugyeong
+    - family-names: Lim
+      given-names: Heuiseok
+  year: 2026

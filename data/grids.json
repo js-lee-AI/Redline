@@ -1,0 +1,148 @@
+{
+ "llada2_math": {
+  "label": "LLaDA2 math",
+  "file": "llada2_math.csv",
+  "cost": "tpf",
+  "reference": "acc95/semi90",
+  "configs": [
+   "acc85/semi70",
+   "acc85/semi90",
+   "acc90/semi70",
+   "acc90/semi90",
+   "acc95/semi70",
+   "acc95/semi90",
+   "acc99/semi90"
+  ]
+ },
+ "llada2_math_3d": {
+  "label": "LLaDA2 math, accept x semi x add",
+  "file": "llada2_math.csv",
+  "cost": "tpf",
+  "reference": "acc95/semi90"
+ },
+ "llada2_math_large": {
+  "label": "LLaDA2 math, large grid",
+  "file": "llada2_math_large.csv",
+  "cost": "tpf",
+  "reference": "acc95/semi90/add0.10"
+ },
+ "llada2_code": {
+  "label": "LLaDA2 code",
+  "file": "llada2_code.csv",
+  "cost": "tpf",
+  "reference": "acc95/semi90"
+ },
+ "sdar_math": {
+  "label": "SDAR math",
+  "file": "sdar_math.csv",
+  "cost": "tpf",
+  "reference": "acc95/semi90",
+  "configs": [
+   "acc85/semi70",
+   "acc95/semi90",
+   "acc99/semi70",
+   "acc99/semi90",
+   "acc85/semi90",
+   "acc90/semi70",
+   "acc90/semi90",
+   "acc95/semi70"
+  ]
+ },
+ "sdar_code": {
+  "label": "SDAR code",
+  "file": "sdar_code.csv",
+  "cost": "tpf",
+  "reference": "acc95/semi90"
+ },
+ "sdar_math500_distilled": {
+  "label": "SDAR MATH-500, hand-picked and distilled",
+  "file": "sdar_math.csv",
+  "cost": "tpf",
+  "reference": "acc95/semi90",
+  "prompts": "math500"
+ },
+ "llada2_math_small": {
+  "label": "LLaDA2 math, reduced prompt set",
+  "file": "llada2_math_small.csv",
+  "cost": "tpf",
+  "reference": "acc95/semi90"
+ },
+ "llada2_code_small": {
+  "label": "LLaDA2 code, reduced prompt set",
+  "file": "llada2_code_small.csv",
+  "cost": "tpf",
+  "reference": "acc95/semi90"
+ },
+ "llada2_math_tiny": {
+  "label": "LLaDA2 math, 32 prompts per subtask",
+  "file": "llada2_math_tiny.csv",
+  "cost": "tpf",
+  "reference": "acc95/semi90"
+ },
+ "specdec_llama_gsm8k": {
+  "label": "Llama GSM8K, typical acceptance",
+  "file": "specdec_llama_gsm8k.csv",
+  "cost": "apf",
+  "reference": "lossless",
+  "configs": [
+   "lossless",
+   "eps0.4",
+   "eps0.3",
+   "eps0.2",
+   "eps0.1",
+   "eps0.05",
+   "eps0.02"
+  ]
+ },
+ "specdec_llama_gsm8k_all": {
+  "label": "Llama GSM8K, typical acceptance, all settings",
+  "file": "specdec_llama_gsm8k.csv",
+  "cost": "apf",
+  "reference": "lossless"
+ },
+ "specdec_llama_humaneval": {
+  "label": "Llama HumanEval, typical acceptance",
+  "file": "specdec_llama_humaneval.csv",
+  "cost": "apf",
+  "reference": "lossless"
+ },
+ "specdec_qwen_gsm8k": {
+  "label": "Qwen GSM8K, typical acceptance",
+  "file": "specdec_qwen_gsm8k.csv",
+  "cost": "apf",
+  "reference": "lossless",
+  "configs": [
+   "lossless",
+   "eps0.4",
+   "eps0.3",
+   "eps0.2",
+   "eps0.1",
+   "eps0.05",
+   "eps0.02"
+  ]
+ },
+ "specdec_qwen_gsm8k_all": {
+  "label": "Qwen GSM8K, typical acceptance, all settings",
+  "file": "specdec_qwen_gsm8k.csv",
+  "cost": "apf",
+  "reference": "lossless"
+ },
+ "specdec_qwen_humaneval": {
+  "label": "Qwen HumanEval, typical acceptance",
+  "file": "specdec_qwen_humaneval.csv",
+  "cost": "apf",
+  "reference": "lossless"
+ },
+ "quant_llama_gsm8k": {
+  "label": "Llama GSM8K, weight precision",
+  "file": "quant_llama_gsm8k.csv",
+  "cost": "memory",
+  "reference": "bf16",
+  "memory_gb": {
+   "bf16": 16.061,
+   "int8": 8.03,
+   "nf4": 4.015,
+   "fp4": 4.015
+  }
+ }
+}

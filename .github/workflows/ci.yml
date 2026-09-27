@@ -1,0 +1,68 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: tests (Python ${{ matrix.python-version }}, CPU, base install)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.13"]
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - name: Install the base package and pytest
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[test]"
+      - name: Base import stays light
+        run: python -c "import sys, redline; assert 'matplotlib' not in sys.modules, 'matplotlib leaked into the base import'; print(redline.__version__)"
+      - name: Quickstart
+        run: python examples/quickstart.py
+      - name: Command line
+        run: |
+          redline --help
+          redline select data/outcomes/llada2_math.csv --reference acc95/semi90 --alpha 0.10
+      - name: Table 2 from the shipped outcomes
+        run: python experiments/table2_deployments.py
+      - name: Tests
+        run: pytest -q
+
+  install:
+    name: clean install, used from outside the checkout
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      - name: Non-editable install
+        run: |
+          python -m pip install --upgrade pip
+          pip install .
+      - name: Import and run away from the source tree
+        working-directory: ${{ runner.temp }}
+        run: |
+          python -c "import redline; print(redline.__version__)"
+          redline --version
+          redline demo
+          redline sample-size --alpha 0.05 --risk 0.03 --m 8

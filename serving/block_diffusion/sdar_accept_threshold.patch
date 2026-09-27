@@ -1,0 +1,16 @@
+--- a/diffulex/sampler/sdar.py
++++ b/diffulex/sampler/sdar.py
+@@ -17,7 +17,12 @@
+         threshold: float = 0.95,
+         **kwargs,
+     ) -> torch.Tensor:
+-        high_conf_indices = torch.where(initial_confidence > threshold)[0]
++        # use the configured accept threshold, 0.95 only if the block has none
++        thresholds = getattr(block, "thresholds", None)
++        accept_threshold = getattr(thresholds, "accept_threshold", None)
++        if accept_threshold is None:
++            accept_threshold = threshold
++        high_conf_indices = torch.where(initial_confidence > accept_threshold)[0]
+         is_initial_block = getattr(block, "block_id", None) == 0 and getattr(block, "prev_block", None) is None
+         if block.should_force_decode_topk or is_initial_block:
+             topk_idx = (
