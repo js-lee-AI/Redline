@@ -1,4 +1,4 @@
-"""Redline: deploy the fastest serving configuration within a risk budget.
+"""Redline: faster block-diffusion serving with distribution-free risk guarantees.
 
     import redline
     result = redline.select(correct, tpf, reference=0, alpha=0.10)

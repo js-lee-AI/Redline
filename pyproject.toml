@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "redline-serving"
 dynamic = ["version"]
-description = "Deploy the fastest serving configuration within a risk budget"
+description = "Faster block-diffusion serving with distribution-free risk guarantees"
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"

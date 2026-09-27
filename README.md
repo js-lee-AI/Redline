@@ -1,14 +1,8 @@
 <p align="center">
-  <img src="assets/banner.png" width="100%" alt="Redline, deploy the fastest serving configuration within a risk budget" />
+  <img src="assets/banner.png" width="100%" alt="Redline, faster block-diffusion serving with distribution-free risk guarantees" />
 </p>
 
 <div align="center">
-
-# Redline
-
-### Deploy the fastest serving configuration within a risk budget
-
-<em>Faster Block-Diffusion Serving with Distribution-Free Risk Guarantees</em>
 
 [![Code MIT](https://img.shields.io/badge/Code-MIT-green.svg)](LICENSE)
 [![Paper CC BY 4.0](https://img.shields.io/badge/Paper-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)

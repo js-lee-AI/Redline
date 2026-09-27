@@ -66,7 +66,7 @@ def _sample_size(args):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(
-        prog="redline", description="Deploy the fastest serving configuration within a risk budget")
+        prog="redline", description="Faster block-diffusion serving with distribution-free risk guarantees")
     parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     sub = parser.add_subparsers(dest="command", required=True)
 
