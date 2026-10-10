@@ -16,6 +16,12 @@
 
 </div>
 
+<p align="center">
+  <a href="https://js-lee-ai.github.io/Redline/#race"><img src="assets/replay.gif" width="100%" alt="LLaDA2-mini writes the same 238-token answer to one MATH-500 problem under two serving configurations. The configuration Redline deploys at a risk budget of 0.10 finishes in 20 model forwards, and the engine default in 35" /></a>
+</p>
+
+<p align="center"><em>LLaDA2-mini, the clock counts model forwards. The <a href="https://js-lee-ai.github.io/Redline/#race">project page</a> replays it live.</em></p>
+
 ---
 
 ## News
